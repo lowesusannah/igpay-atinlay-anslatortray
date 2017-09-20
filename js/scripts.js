@@ -15,9 +15,9 @@ var makePigLatin = function(input) {
       word = word + "way"
     } else {
       var characters = word.split("");
-      for (var i = 0; i < characters.length; i++) {
+      for (var i = 1; i < characters.length; i++) {
         var character = characters[i];
-        if (isVowel(character) || i > 0 && character.toLowerCase() === "y" && !isVowel(characters[i-1])) {
+        if (isVowel(character) ||  character.toLowerCase() === "y" && !isVowel(characters[i-1])) {
           var cluster = word.slice(0,i);
           if (cluster[cluster.length-1].toLowerCase() === "y") {
             cluster = "y" + cluster.slice(0,cluster.length)
@@ -29,7 +29,8 @@ var makePigLatin = function(input) {
     }
 
     output = output + word + " ";
-  })
+    alert(output);
+  });
   return output;
 }
 
@@ -37,8 +38,8 @@ var makePigLatin = function(input) {
 $(document).ready(function() {
   $("form").submit(function(event){
     event.preventDefault();
-    var input = $("#user-input").val();
-    var output = makePigLatin(input);
+    var userinput = $("#user-input").val();
+    var output = makePigLatin(userinput);
     $("#output").text(output);
   });
 });

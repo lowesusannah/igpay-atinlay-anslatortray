@@ -1,5 +1,5 @@
 
-_can detect individual words_
+_can detect and combine individual words_
   input: two words
   output: two words
 _if a word starts with a vowel, add "way" to the end of it_
@@ -14,6 +14,8 @@ _if the word contains a consonant cluster, move entire cluster to the end of the
 _if y is the second letter, y will be treated as a vowel._
   example input: my
   example output: ymay
-_if the word has a consonant cluster with y at the end of it, treat y as a vowel, placing it at the start of the word_
+_if the word has a consonant cluster with y at the end of it, place it at the start of the word_
   example input: rhythm
-  example output: rhythm
+  example output: ythmrhay
+_Will do all of the above to multiple words_
+  example input: Hello, my name is john

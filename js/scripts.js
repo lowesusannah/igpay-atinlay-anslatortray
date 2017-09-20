@@ -1,9 +1,9 @@
 //Business Logic
 
-var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+var vowels = ["a", "e", "i", "o", "u"]
 
 var isVowel = function(character) {
-  return vowels.includes(character)
+  return vowels.includes(character.toLowerCase())
 }
 
 var makePigLatin = function(input) {
@@ -17,8 +17,11 @@ var makePigLatin = function(input) {
       var characters = word.split("");
       for (var i = 0; i < characters.length; i++) {
         var character = characters[i];
-        if (isVowel(character)) {
+        if (isVowel(character) || i > 0 && character.toLowerCase() === "y" && !isVowel(characters[i-1])) {
           var cluster = word.slice(0,i);
+          if (cluster[cluster.length-1].toLowerCase() === "y") {
+            cluster = "y" + cluster.slice(0,cluster.length)
+          }
           word = word.slice(i, word.length) + cluster + "ay";
           break;
         }

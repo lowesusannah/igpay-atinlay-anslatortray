@@ -23,6 +23,10 @@ var makePigLatin = function(input) {
             cluster = "y" + cluster.slice(0,cluster.length)
           }
           word = word.slice(i, word.length) + cluster + "ay";
+          if (firstChar.toUpperCase() === firstChar){
+            var firstCapsPigCharacter = word[0].toUpperCase();
+            word = firstCapsPigCharacter + word.slice(1, word.length).toLowerCase();
+          }
           break;
         }
       }

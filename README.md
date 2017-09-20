@@ -19,3 +19,9 @@ _if the word has a consonant cluster with y at the end of it, place it at the st
   example output: ythmrhay
 _Will do all of the above to multiple words_
   example input: Hello, my name is john
+_Will capitalize the first character of the pig latin version, if original was also capitalized_
+  example input: Hello
+  example output: Ellohay
+_Will account for words with punctuation; placing them at the back of the words_
+  example input: hello,
+  example output: ellohay,

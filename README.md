@@ -22,6 +22,6 @@ _Will do all of the above to multiple words_
 _Will capitalize the first character of the pig latin version, if original was also capitalized_
   example input: Hello
   example output: Ellohay
-_Will account for words with punctuation; placing them at the back of the words_
+_Will account for phrases that have a single character of punctuation; placing them at the back of the piglatin-ified words_
   example input: hello,
   example output: ellohay,

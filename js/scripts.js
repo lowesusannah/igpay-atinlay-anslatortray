@@ -14,7 +14,15 @@ var makePigLatin = function(input) {
     if (isVowel(firstChar)) {
       word = word + "way"
     } else {
-      word = word.slice(1)+firstChar+"ay"
+      var characters = word.split("");
+      for (var i = 0; i < characters.length; i++) {
+        var character = characters[i];
+        if (isVowel(character)) {
+          var cluster = word.slice(0,i);
+          word = word.slice(i, word.length) + cluster + "ay";
+          break;
+        }
+      }
     }
 
     output = output + word + " ";

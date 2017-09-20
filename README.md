@@ -1,3 +1,9 @@
+#_{Pig Latin Translator}_
+
+####_{A translator from English to Pig Latin}, {September 20, 2017}_
+
+####By _**{Joseph Tomlinson and Susannah Lowe}**_
+
 
 _can detect and combine individual words_
   input: two words

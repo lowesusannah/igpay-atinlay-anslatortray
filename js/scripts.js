@@ -13,6 +13,8 @@ var makePigLatin = function(input) {
     var firstChar = word[0];
     if (isVowel(firstChar)) {
       word = word + "way"
+    } else {
+      word = word.slice(1)+firstChar+"ay"
     }
 
     output = output + word + " ";
